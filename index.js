@@ -53,8 +53,8 @@ app.get('/api/v1/todo', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`✓ Server running on http://localhost:${PORT}`);
-  console.log(`✓ Health check: http://localhost:${PORT}/health`);
-  console.log(`✓ Todos endpoint: http://localhost:${PORT}/api/v1/todo`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/health`);
+  console.log(`Todos endpoint: http://localhost:${PORT}/api/v1/todo`);
 });
